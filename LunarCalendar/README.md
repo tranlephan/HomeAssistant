@@ -10,4 +10,15 @@
 </ol>
 <br>
 <h2>lovelace config</h2>
-
+<div class="highlight highlight-source-yaml">
+  <pre>
+  <span class="pl-ent">resources</span>:
+  - 
+  <span class="pl-ent">url</span>
+  :
+  <span class="pl-s">/local/custom-lovelace/weather-card/weather-card.js</span>
+    <span class="pl-ent">type</span>
+    :
+    <span class="pl-s">module</span>
+  </pre>
+</div>

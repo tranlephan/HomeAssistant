@@ -11,9 +11,9 @@
 <br>
 <h2>lovelace config</h2>
 <div>
-  <pre>
-  hello
-    hello:helo
-    heloo:
-  </pre>
+<pre>
+hello
+  hello:helo
+  heloo:
+</pre>
 </div>

@@ -4,9 +4,8 @@
 <br>
 <h2>Manual</h2>
 <ol>
-<li>Download the <a href="https://raw.githubusercontent.com/bramkragten/weather-card/v1.2.0/dist/weather-card.js" rel="nofollow">weather-card.js</a> to <code>/config/www/custom-lovelace/weather-card/</code>. (or an other folder in <code>/config/www/</code>)</li>
-<li>Save, the <a href="https://www.amcharts.com/free-animated-svg-weather-icons/" rel="nofollow">amCharts icons</a> (The contents of the folder "animated") under <code>/config/www/custom-lovelace/weather-card/icons/</code> (or an other folder in <code>/config/www/</code>)</li>
-<li>If you use Lovelace in storage mode, and want to use the editor, download the <a href="https://raw.githubusercontent.com/bramkragten/weather-card/v1.2.0/dist/weather-card-editor.js" rel="nofollow">weather-card-editor.js</a> to <code>/config/www/custom-lovelace/weather-card/</code>. (or the folder you used above)</li>
+<li>Download the <a href="https://raw.githubusercontent.com/bramkragten/weather-card/v1.2.0/dist/weather-card.js" rel="nofollow">lunar_day.js</a> to <code>/config/www/</code>. (or an other folder in <code>/config/www/</code>)</li>
+<li>Save, the <a href="http://www.mediafire.com/file/6hpicd55nz2y6fg/icons.rar/file" rel="nofollow">12ConGiap icons</a> (The contents of the folder "animated") under <code>/config/www/</code> (or all image file <code>/config/www/icons/12congiap/</code>)</li>
 </ol>
 <br>
 <h2>lovelace config</h2>

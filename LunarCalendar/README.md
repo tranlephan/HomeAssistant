@@ -1,6 +1,7 @@
 <h1>Lovelaca Lunar Calendar card</h1>
-<meta name="description" content="Âm Lịch Home Assistant" 
+<meta name="description" content="Âm Lịch Home Assistant" />
 <meta name="robots" content="Lunar Calendar card" />
+<p> Thẻ Lịch Âm Cho Home Assistant</p>
 <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/tranlephan/HomeAssistant/blob/master/LunarCalendar/hassLunarCalendar.jpg?raw=true"><img src="https://github.com/tranlephan/HomeAssistant/blob/master/LunarCalendar/hassLunarCalendar.jpg?raw=true" alt="Weather Card" style="max-width:100%;"></a></p>
 <br>
 <h2>Manual</h2>

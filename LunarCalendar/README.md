@@ -1,6 +1,6 @@
 <h1>Lovelaca Lunar Calendar card</h1>
 <p>Thẻ Âm Lịch Việt Nam Cho Home Assistant</p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/bramkragten/custom-ui/blob/master/weather-card/weather-card.gif?raw=true"><img src="https://github.com/bramkragten/custom-ui/raw/master/weather-card/weather-card.gif?raw=true" alt="Weather Card" style="max-width:100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/tranlephan/HomeAssistant/blob/master/LunarCalendar/hassLunarCalendar.jpg?raw=true"><img src="https://github.com/bramkragten/custom-ui/raw/master/weather-card/weather-card.gif?raw=true" alt="Weather Card" style="max-width:100%;"></a></p>
 <br>
 <h2>Manual</h2>
 <ol>

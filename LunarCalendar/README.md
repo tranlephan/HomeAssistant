@@ -4,11 +4,11 @@
 <p> Thẻ Lịch Âm Cho Home Assistant</p>
 <p><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/tranlephan/HomeAssistant/master/LunarCalendar/lunar-day.png?raw=true"><img src="https://raw.githubusercontent.com/tranlephan/HomeAssistant/master/LunarCalendar/lunar-day.png?raw=true" alt="Weather Card" style="max-width:100%;"></a></p>
 <br>
-<h2>New update 3/2020</h2>
-  color CSS
-  zodiac
-  update DanhNgon
-  delete cnday
+<h2>New update 3/2020</h2><br>
+  color CSS<br>
+  zodiac<br>
+  update DanhNgon<br>
+  delete cnday<br>
 <h2>Manual</h2>
 <ol>
 <li>Download the <a href="https://github.com/tranlephan/HomeAssistant/blob/master/LunarCalendar/lunar_day.js" rel="nofollow">lunar_day.js</a> to <code>/config/www/</code>. (or an other folder in <code>/config/www/</code>)</li>

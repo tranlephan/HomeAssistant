@@ -2,9 +2,10 @@
 <meta name="description" content="Âm Lịch Home Assistant" />
 <meta name="robots" content="Lunar Calendar card" />
 <p> Thẻ Lịch Âm Cho Home Assistant</p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/tranlephan/HomeAssistant/master/LunarCalendar/lunar-day.png?raw=true"><img src="https://raw.githubusercontent.com/tranlephan/HomeAssistant/master/LunarCalendar/lunar-day.png?raw=true" alt="Weather Card" style="max-width:100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/tranlephan/HomeAssistant/master/LunarCalendar/lunar-day1.png?raw=true"><img src="https://raw.githubusercontent.com/tranlephan/HomeAssistant/master/LunarCalendar/lunar-day1.png?raw=true" alt="Weather Card" style="max-width:100%;"></a></p>
 <br>
 <h2>New update 3/2020</h2><br>
+  edit code
   color CSS<br>
   zodiac<br>
   update DanhNgon<br>

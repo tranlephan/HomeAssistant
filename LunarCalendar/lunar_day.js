@@ -51,7 +51,7 @@ class Lunarday extends HTMLElement {
                   holidaylunar = lunar[i].l;
                 }
               }
-    holidaylunar = '<b><font color="FF0000">' + holidaylunar + "</font></b>";
+    holidaylunar = holidaylunar;
     return holidaylunar
     }
     function checkHolidaySolar(nn, tt) {
@@ -61,7 +61,7 @@ class Lunarday extends HTMLElement {
                   holidaysolar = solar[j].l;
                 }
               }
-    holidaysolar = '<b><font color="FF0000">' + holidaysolar + "</font></b>";
+    holidaysolar = holidaysolar;
     return holidaysolar
     }
     function getGioHoangDao(jd) {
@@ -102,40 +102,40 @@ class Lunarday extends HTMLElement {
     return INT(SunLongitude(dayNumber - 0.5 - timeZone / 24.0) / PI * 12);
     }
   function checkzodiac(nn, tt) {
-    if ((nn>21 && tt == 12) || (nn<=19 && tt== 1)){
+    if ((nn>=21 && tt == 12) || (nn<=19 && tt== 1)){
       zodiac = 'Ma Kết';
     }
-    if ((nn>20 && tt ==1) || (nn<=18 && tt == 2)){
+    if ((nn>=20 && tt ==1) || (nn<=18 && tt == 2)){
       zodiac = 'Bảo Bình';
     }
-    if ((nn>19 && tt == 2) || (nn <=20 && tt == 3)){
+    if ((nn>=19 && tt == 2) || (nn <=20 && tt == 3)){
       zodiac = 'Song Ngưu';
     }
-    if ((nn>21 && tt == 3) || (nn <=20 && tt == 4)){
+    if ((nn>=21 && tt == 3) || (nn <=20 && tt == 4)){
       zodiac = 'Bạch Dương';
     }
-    if ((nn>21 && tt == 4) || (nn <=20 && tt == 5)){
+    if ((nn>=21 && tt == 4) || (nn <=20 && tt == 5)){
       zodiac = 'Kim Ngưu';
     }
-    if ((nn>21 && tt == 5) || (nn<=20 && tt == 6)){
+    if ((nn>=21 && tt == 5) || (nn<=20 && tt == 6)){
       zodiac = 'Song Tử';
     }
-    if ((nn>21 && tt == 6) || (nn<=20 && tt == 7)){
+    if ((nn>=21 && tt == 6) || (nn<=20 && tt == 7)){
       zodiac = 'Cự Giả';
     }
-    if ((nn>21 && tt  == 7) || (nn<=20 && tt== 8)){
+    if ((nn>=21 && tt  == 7) || (nn<=20 && tt== 8)){
       zodiac = 'Sư Tử';
     }
-    if ((nn>21 && tt ==8) || (nn<=22 && tt == 9)){
+    if ((nn>=21 && tt ==8) || (nn<=22 && tt == 9)){
       zodiac = 'Xử Nữ';
     }
-    if ((nn>23 && tt == 9) || (nn<=20 && tt ==10)){
+    if ((nn>=23 && tt == 9) || (nn<=20 && tt ==10)){
       zodiac = 'Thiên Bình';
     }
-    if ((nn>21 && tt == 10) || (nn<=22 && tt == 11)){
+    if ((nn>=21 && tt == 10) || (nn<=22 && tt == 11)){
       zodiac = 'Bọ Cạp';
     }
-    if ((nn>23 && tt == 11) || (nn<=20 && tt == 12)){
+    if ((nn>=23 && tt == 11) || (nn<=20 && tt == 12)){
       zodiac = 'Nhân Mã';
     }
   return zodiac;
@@ -273,6 +273,9 @@ class Lunarday extends HTMLElement {
     var yyyy = date.getFullYear();
     var mm = date.getMonth();
     var ly = +Intl.DateTimeFormat("vi-VN-u-ca-chinese", {year: "numeric"}).format(date).match(/\d+/)[0];
+    if (ly<=1000){
+      ly = (ly-17) + 2000;
+    }
     var lm = +Intl.DateTimeFormat("vi-VN-u-ca-chinese", {month: "long"}).format(date).match(/\d+/)[0];
     var ld = +Intl.DateTimeFormat("vi-VN-u-ca-chinese", {day: "numeric"}).format(date).match(/\d+/)[0];
     var jd;
@@ -285,7 +288,7 @@ class Lunarday extends HTMLElement {
         holiday = DanhNgon[Math.floor(Math.random() * DanhNgon.length)];
     }
     else {
-        holiday = holidaysolar + "<br>" + holidaylunar;
+        holiday = '<b><font color="FF0000">' + holidaysolar + "<br>" + holidaylunar + "</font></b>";
     }
     vismm = "Tháng " + vimm[mm];
     villm = "Tháng " + vimm[lm - 1];
@@ -315,7 +318,7 @@ class Lunarday extends HTMLElement {
           <div class="center3">
             <div class="thu">${enday}</div>
             <div class="thuv">${thu}</div>
-            <div class="thu">${zodiac}</div>
+            <div class="zodiac">${zodiac}</div>
           </div>
 
           <div class="end3">
@@ -338,7 +341,7 @@ class Lunarday extends HTMLElement {
               </div>
           </div>
           <div class="footer">
-          <p>&copy; 2019 Bạn Phan</p>
+          <p>&copy; 2020 Bạn Phan</p>
           </div>
       </div>
             <style>
@@ -395,6 +398,13 @@ class Lunarday extends HTMLElement {
           font-size: 1.6em;
           color:#CC00FF
         }
+        .zodiac{
+          width:32%;
+          float: left;
+          text-align: center;
+          font-size: 1.2em;
+          color:#CC00FF
+        }
         .thuv{
           font-weight:bold;
           width:36%;
@@ -439,7 +449,7 @@ class Lunarday extends HTMLElement {
           float: left;
           text-align: center;
         }
-		.footer{
+    .footer{
           font-size: 85%;
           border-top:solid #e6e6e6;
           color: #838383;

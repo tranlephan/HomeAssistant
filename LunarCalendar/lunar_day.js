@@ -23,7 +23,7 @@ new update 3/2020
 delete
   cnday
 ***************************************************************************** */
-//3/2020
+//22/3/2020
 class Lunarday extends HTMLElement {
   set hass(hass) {
     if (!this.content) {
@@ -142,7 +142,8 @@ class Lunarday extends HTMLElement {
   }
     const me ="Copyright &copy; 2019 Bạn Phan"
     const date = new Date();
-    var vimm = ["Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bẩy", "Tám", "Chín", "Mười", "Mười Một", "Mười Hai"],
+    var color = ["#66FFFF", "#00FFCC", "#00FF99", "#00FF33", "#33CC33", "#CC9900", "#CCFF00", "#880000", "#CC9999", "#3399FF", "#009999", "#FF66CC", "#FF6666", "#9966FF", "#3366FF", "#0066CC", "#0033CC", "#006633", "00DD00", "#000055", "#FF3333", "#96CDCD"],
+    	vimm = ["Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bẩy", "Tám", "Chín", "Mười", "Mười Một", "Mười Hai"],
         enmm = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         can = ["Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ", "Canh", "Tân", "Nhâm", "Quý"],
         chi = ["Tí", "Sửu", "Dần", "Mão", "Thìn", "Tị", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"],
@@ -303,6 +304,24 @@ class Lunarday extends HTMLElement {
     camchigio += "Giờ " + can[(jd - 1) * 2 % 10] + " " + chi[0];
     giohoangdao = getGioHoangDao(jd);
     tiet_khi = TIETKHI[getSunLongitude(jd + 1, 7.0)];
+    if (dddd == 0){
+    	dd 		  = '<font color="FF0000">' + dd + "</font>";
+    	thu 	  = '<font color="FF0000">' + thu + "</font>";
+    	enday 	= '<font color="FF0000">' + enday + "</font>";
+    	villm 	= '<font color="FF0000">' + villm + "</font>";
+    	ld 		  = '<font color="FF0000">' + ld + "</font>";
+    	zodiac	= '<font color="FF0000">' + zodiac + "</font>";
+    }
+    if (dddd != 0){
+    	var randomclor = Math.floor(Math.random() * color.length);
+      dd          = '<font color="' + color[Math.floor(Math.random() * color.length)] + '">' + dd + "</font>";
+      thu         = '<font color="' + color[randomclor] + '">' + thu + "</font>";
+      enday       = '<font color="' + color[randomclor] + '">' + enday + "</font>";
+      zodiac      = '<font color="' + color[randomclor] + '">' + zodiac + "</font>";
+      randomclor  = Math.floor(Math.random() * color.length);
+      villm       = '<font color="' + color[randomclor] + '">' + villm + "</font>";
+      ld          = '<font color="' + color[randomclor] + '">' + ld + "</font>";
+    }
     this.content.innerHTML = `
       <div class="container">
           <div class="top3">
@@ -345,9 +364,6 @@ class Lunarday extends HTMLElement {
           </div>
       </div>
             <style>
-        body{
-          font-family: arial;
-        }
         .container{
           margin: auto;
           position: relative;
@@ -378,7 +394,6 @@ class Lunarday extends HTMLElement {
         .ngayduong{
           font-weight:bold;
           font-size: 13em;
-          color:#FF0000;
         }
         .center3{
           display: block;
@@ -396,21 +411,18 @@ class Lunarday extends HTMLElement {
           float: left;
           text-align: center;
           font-size: 1.6em;
-          color:#CC00FF
         }
         .zodiac{
           width:32%;
           float: left;
           text-align: center;
           font-size: 1.2em;
-          color:#CC00FF
         }
         .thuv{
           font-weight:bold;
           width:36%;
           float: left;
           text-align: center;
-          color:#B40486;
           font-size: 1.8em;
         }
         .end3:after{
@@ -438,11 +450,9 @@ class Lunarday extends HTMLElement {
         }
         .ngayam{
           font-size: 4.5em;
-          color:#01DF01;
         }
         .thangam{
           font-size: 1.2em;
-          color:#01DF01;
         }
         .right4{
           width:35%;

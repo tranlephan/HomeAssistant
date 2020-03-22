@@ -25,6 +25,18 @@ resources:
 </pre>
 </div>
 <br>
+<p>or</p>
+<br>
+<div>
+<pre>
+resources:
+  - type: js
+    url: https://raw.githubusercontent.com/tranlephan/HomeAssistant/master/LunarCalendar/lunar_day.js
+</pre>
+</div>
+<br>
+
+<br>
 <div>
 <pre>
   - badges: []

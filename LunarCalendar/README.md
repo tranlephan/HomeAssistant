@@ -42,12 +42,12 @@ resources:
   - badges: []
     title: Lịch
     cards:
-      - type: 'custom:lunar-day'
+      - type: custom:lunar-day
 </pre>
 </div>
 <p>or</p>
 <div>
 <pre>
-      - type: 'custom:lunar-day'
+      - type: custom:lunar-day
 </pre>
 </div>

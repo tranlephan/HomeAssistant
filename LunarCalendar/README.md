@@ -1,4 +1,4 @@
-<h1>Lovelaca Lunar Calendar card</h1>
+<h1>Lovelaca Lunar Calendar card Home Assistant</h1>
 <meta name="description" content="Âm Lịch Home Assistant" />
 <meta name="robots" content="Lunar Calendar card" />
 <p> Thẻ Lịch Âm Cho Home Assistant</p>

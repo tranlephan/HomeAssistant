@@ -13,7 +13,7 @@
 <h2>Manual</h2>
 <ol>
 <li>Download the <a href="https://github.com/tranlephan/HomeAssistant/blob/master/LunarCalendar/lunar_day.js" rel="nofollow">lunar_day.js</a> to <code>/config/www/</code>. (or an other folder in <code>/config/www/</code>)</li>
-<li>Save, the <a href="http://www.mediafire.com/file/6hpicd55nz2y6fg/icons.rar/file" rel="nofollow">12ConGiap icons</a> (The contents of the folder "animated") under <code>/config/www/</code> (or all image file <code>/config/www/icons/12congiap/</code>)</li>
+<li>Save, the <a href="http://www.mediafire.com/file/6hpicd55nz2y6fg/icons.rar/file" rel="nofollow">12ConGiap icons</a> (The contents of the folder "animated") under <code>/config/www/</code> (or all image file <code>/config/www/12congiap/</code>)</li>
 </ol>
 <br>
 <h2>lovelace config</h2>

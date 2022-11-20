@@ -12,7 +12,8 @@
   delete cnday<br>
 <br>
 <h2>New update 11/2022</h2><br>
-  fix display errorS<br>
+  fix display error<br>
+  <br>
 <h2>Manual</h2>
 <ol>
 <h2>Manual</h2>

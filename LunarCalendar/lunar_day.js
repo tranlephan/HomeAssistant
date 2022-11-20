@@ -1,16 +1,14 @@
 /*! *****************************************************************************
 Bạn Phan
 2020
+fix display error 11/2022
 Save the lunar_day.js to /config/www/. (or an other folder in /config/www/)
 Save, the 12ConGiap icons (The contents of the folder "animated") under /config/www/ (or all image file /config/www/icons/12congiap/)
   dowloand 12congiap http://www.mediafire.com/file/6hpicd55nz2y6fg/icons.rar/file
-
 lovelace config
 resources:
   - type: js
     url: /local/lunar_day.js
-
-
   - badges: []
     title: Lịch
     cards:
@@ -294,10 +292,10 @@ class Lunarday extends HTMLElement {
     vismm = "Tháng " + vimm[mm];
     villm = "Tháng " + vimm[lm - 1];
     enmm = enmm[mm];
-    camchithang = "<img src=\"/local/icons/12congiap/" + (lm+1)%12 + ".png" + "\"/>";
-    camchingay = "<img src=\"/local/icons/12congiap/" + (jd+1)%12 + ".png" + "\"/>";
-    camchigio = "<img src=\"/local/icons/12congiap/0.png" + "\"/>";
-    chinam = "<img src=\"/local/icons/12congiap/" + (ly + 59) % 12 + ".png" + "\"/>";
+    camchithang = "<img src=\"/local/12congiap/" + (lm+1)%12 + ".png" + "\"/>";
+    camchingay = "<img src=\"/local/12congiap/" + (jd+1)%12 + ".png" + "\"/>";
+    camchigio = "<img src=\"/local/12congiap/0.png" + "\"/>";
+    chinam = "<img src=\"/local/12congiap/" + (ly + 59) % 12 + ".png" + "\"/>";
     namAL = can [(ly + 6) % 10] + ' ' + chi [(ly +8) % 12];
     camchithang += "Tháng " + can[(ly*12+lm+3) % 10] + " " + chi[(lm+1)%12];
     camchingay += "Ngày " + can[(jd + 9) % 10] + " " + chi[(jd+1)%12];
@@ -329,17 +327,15 @@ class Lunarday extends HTMLElement {
             <div class="year">${yyyy}</div>
             <div class="thang">${enmm}</div>
           </div>
-          <div class="center2">
-            <div class="ngayduong">${dd}</div>
-            <div class="le">${holiday}</div>
-          </div>
-
+          
+		  <div class="ngayduong">${dd}</div>
+          <div class="le">${holiday}</div>
+          
           <div class="center3">
             <div class="thu">${enday}</div>
             <div class="thuv">${thu}</div>
             <div class="zodiac">${zodiac}</div>
           </div>
-
           <div class="end3">
               <div class="left4">
                 <div class="ccnam">${chinam}Năm ${namAL}</div>
@@ -348,20 +344,16 @@ class Lunarday extends HTMLElement {
                 <div class="cc">${camchigio}</div>
                 <div class="tk">Tiết Khí: ${tiet_khi}</div>
               </div>
-
               <div class="center4">
                 <div class="thangam">${villm}</div>
                 <div class="ngayam">${ld}</div>
               </div>
-
               <div class="right4">
                 <div class="ghd">GIỜ HOÀNG ĐẠO</div>
                 <div class="ghd">${giohoangdao}</div>
               </div>
           </div>
-          <div class="footer">
-          <p>&copy; 2020 Bạn Phan</p>
-          </div>
+          
       </div>
             <style>
         .container{
@@ -371,13 +363,20 @@ class Lunarday extends HTMLElement {
         .top3{
           display: block;
           clear: both;
-          font-size: 1.5em;
+		  padding-top: 12px;
+		  padding-bottom: 10px;
+          width:99%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
         .thang{
           width:40%;
           float: left;
           text-align: center;
           color:#BB0000;
+		  font-size: 1.5em;
         }
         .year{
           width:20%;
@@ -385,21 +384,37 @@ class Lunarday extends HTMLElement {
           float: left;
           text-align: center;
           font-weight: bold;
-        }
-        .center2{
-          width:100%;
-          height: 300px;
-          text-align: center
+		  font-size: 1.8em;
         }
         .ngayduong{
+		  display: block;
+          clear: both;
+		  width:100%;
+		  height:270px;
           font-weight:bold;
-          font-size: 13em;
-        }
+		  font-size:20em;
+		  display: flex;
+          justify-content: center;
+          align-items: center;
+		}
+		.le{
+		  display: block;
+          clear: both;
+		  width:100%;
+          font-weight:bold;
+		  display: flex;
+		  font-size:1.3em;
+		  padding-top: 5px;
+		  padding-bottom: 20px;
+		  justify-content: center;
+		  align-items: center;
+		}
         .center3{
           display: block;
           clear: both;
+		  padding-top: 12px;
+		  padding-bottom: 12px;
           width:99%;
-          height: 40px;
           border:2px;
           border:1px solid Yellow;
           display: flex;
@@ -416,7 +431,7 @@ class Lunarday extends HTMLElement {
           width:32%;
           float: left;
           text-align: center;
-          font-size: 1.2em;
+          font-size: 1.6em;
         }
         .thuv{
           font-weight:bold;
@@ -448,23 +463,41 @@ class Lunarday extends HTMLElement {
           float: left;
           text-align: center;
         }
-        .ngayam{
-          font-size: 4.5em;
-        }
-        .thangam{
-          font-size: 1.2em;
-        }
+		.ngayam{
+		  display: block;
+          clear: both;
+		  width:100%;
+		  height:70px;
+          font-weight:bold;
+		  font-size:8em;
+		  display: flex;
+          justify-content: center;
+          align-items: center;
+		  padding-top: 20px;
+		  padding-bottom: 5px;
+		}
+		.thangam{
+		  display: block;
+          clear: both;
+		  width:100%;
+		  height:20%;
+          font-weight:bold;
+		  display: flex;
+		  font-size:1.2em;
+		  padding-top: 5px;
+		  padding-bottom: 2px;
+		  justify-content: center;
+		  align-items: center;
+		}
         .right4{
           width:35%;
           float: left;
           text-align: center;
+		  padding-bottom: 10px;
         }
-    .footer{
-          font-size: 85%;
-          border-top:solid #e6e6e6;
-          color: #838383;
-      text-align: right
-        }
+		.tk{
+			padding-left:10px;
+		}
       </style>
     `;
   }

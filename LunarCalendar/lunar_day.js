@@ -1,7 +1,6 @@
 /*! *****************************************************************************
 Bạn Phan
 2020
-fix display error 11/2022
 Save the lunar_day.js to /config/www/. (or an other folder in /config/www/)
 Save, the 12ConGiap icons (The contents of the folder "animated") under /config/www/ (or all image file /config/www/icons/12congiap/)
   dowloand 12congiap http://www.mediafire.com/file/6hpicd55nz2y6fg/icons.rar/file
@@ -153,7 +152,7 @@ class Lunarday extends HTMLElement {
       ],
     DanhNgon =[ "Bạn sinh ra là một nguyên bản. Đừng chết đi như một bản sao",
           "Đừng ngại thay đổi. Bạn có thể mất một cái gì đó tốt nhưng bạn có thể đạt được một cái gì đó còn tốt hơn",
-          "Cuộc sống vốn không công bằng. Hãy tập quen dần với điều đó - <i>Bill Gates</i>",
+          "Cuộc sống vốn không công bằng. Hãy tập quen dần với điều đó - Bill Gates",
           "Say là cái điên tự nguyện ",
           "Khi nói ít đi, bạn sẽ nghe thấy nhiều hơn",
           "Dù có đeo vàng đi chăng nữa, con lừa vẫn là con lừa",
@@ -163,35 +162,35 @@ class Lunarday extends HTMLElement {
           "Cuộc sống cũng giống như đi xe đạp điện, nếu muốn thăng bằng hay tiếp tục di chuyển",
           "Hạnh phúc … không phải là được nhiều người yêu. Mà là được được một người yêu rất nhiều!",
           "Cuộc sống rất thú vị, và thú vị nhất khi nó được sống vì người khác",
-          "Hãy quay về phía Mặt trời và bạn sẽ không thấy bóng tối - <i>Helen Keller</i>",
-          "Đừng cố gắng để thành công, hãy cố gắng sống có giá trị - <i>Albert Einstein</i>",
-          "Dấu hiệu thực sự của sự thông minh không phải là kiến thức mà là trí tưởng tượng - <i>Albert Einstein</i>",
-          "Nếu bạn sinh ra trong nghèo khó đó không phải là lỗi của bạn. Nhưng nếu bạn chết trong nghèo khó thì đó là lỗi của bạn - <i>Bill Gates</i>",
-          "Đừng so sánh bản thân với người khác. Làm như vậy là bạn đang tự xúc phạm mình đấy - <i>Bill Gates</i>",
-          "Đừng buồn vì bụi hoa hồng có gai mà hãy vui vì trong bụi gai có hoa hồng - <i>Abraham Lincoln</i>",
-          "Nếu ghét một người, tức là bạn đang thất bại trước người đó - <i>Khổng Tử</i>",
-          "Nếu ai đó nói xấu sau lưng bạn, điều đó có nghĩa là bạn đang đi trước mặt họ - <i>Khổng Tử</i>",
-          "Người tài đức nhìn bản thân, kẻ tiểu nhân nhìn người khác - <i>Khổng Tử</i>",
-          "Người tài đức làm rồi mới nói và nói theo những việc đã làm - <i>Khổng Tử</i>",
-          "Quy Tắc Là Thứ Sinh Ra Để Được Phá Vỡ - <i>Donald Trump</i>",
-          "Cách báo thù tốt nhất chính là thành công vang dội – <i>Frank Sinatra</i>",
+          "Hãy quay về phía Mặt trời và bạn sẽ không thấy bóng tối - Helen Keller",
+          "Đừng cố gắng để thành công, hãy cố gắng sống có giá trị - Albert Einstein",
+          "Dấu hiệu thực sự của sự thông minh không phải là kiến thức mà là trí tưởng tượng - Albert Einstein",
+          "Nếu bạn sinh ra trong nghèo khó đó không phải là lỗi của bạn. Nhưng nếu bạn chết trong nghèo khó thì đó là lỗi của bạn - Bill Gates",
+          "Đừng so sánh bản thân với người khác. Làm như vậy là bạn đang tự xúc phạm mình đấy - Bill Gates",
+          "Đừng buồn vì bụi hoa hồng có gai mà hãy vui vì trong bụi gai có hoa hồng - Abraham Lincoln",
+          "Nếu ghét một người, tức là bạn đang thất bại trước người đó - Khổng Tử",
+          "Nếu ai đó nói xấu sau lưng bạn, điều đó có nghĩa là bạn đang đi trước mặt họ - Khổng Tử",
+          "Người tài đức nhìn bản thân, kẻ tiểu nhân nhìn người khác - Khổng Tử",
+          "Người tài đức làm rồi mới nói và nói theo những việc đã làm - Khổng Tử",
+          "Quy Tắc Là Thứ Sinh Ra Để Được Phá Vỡ - Donald Trump",
+          "Cách báo thù tốt nhất chính là thành công vang dội – Frank Sinatra",
           "Muốn thoát khỏi bầy sói thì phải ác hơn cả sói, nếu không muốn chết thì cố mà mọc nanh",
-          "Dù cuộc sống có vần xoay thế nào, hãy sống thật tử tế – <i>Gari</i>",
-          "Không có áp lực thì không có động lực – <i>Thời niên thiếu không thể quay lại ấy</i>",
-          "Sức mạnh vĩ đại nhất mà nhân loại có trong tay chính là tình yêu – <i>Mahatma Gandhi</i>",
-          "Nếu cơ hội không gõ cửa nhà bạn, có nghĩa là nhà bạn chưa có cửa. Hãy gắn 1 cái – <i>Milton Berle</i>",
-          "Ngày hôm nay nếu bạn lãng phí đồng nghĩa với việc bạn bóp chết quá khứ và vứt bỏ ngày mai  – <i>Thư viện Harvard</i>",
-          "Hãy học khi người khác ngủ; lao động khi người khác lười nhác; chuẩn bị khi người khác chơi bời; và bạn sẽ có giấc mơ khi người khác chỉ ao ước – <i>William Arthur Ward</i>",
-          "Để thành công, khao khát thành công của bạn phải lớn hơn nỗi sợ thất bại. - <i>Bill Cosby</i>",
-          "Tôi biết ơn những người đã nói KHÔNG với tôi. Bởi nhờ họ, tôi đã tự mình làm điều đó – <i>Albert Einstein</i>",
-          "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle - <i>Steve Jobs</i>",
+          "Dù cuộc sống có vần xoay thế nào, hãy sống thật tử tế – Gari",
+          "Không có áp lực thì không có động lực – Thời niên thiếu không thể quay lại ấy",
+          "Sức mạnh vĩ đại nhất mà nhân loại có trong tay chính là tình yêu – Mahatma Gandhi",
+          "Nếu cơ hội không gõ cửa nhà bạn, có nghĩa là nhà bạn chưa có cửa. Hãy gắn 1 cái – Milton Berle",
+          "Ngày hôm nay nếu bạn lãng phí đồng nghĩa với việc bạn bóp chết quá khứ và vứt bỏ ngày mai  – Thư viện Harvard",
+          "Hãy học khi người khác ngủ; lao động khi người khác lười nhác; chuẩn bị khi người khác chơi bời; và bạn sẽ có giấc mơ khi người khác chỉ ao ước – William Arthur Ward",
+          "Để thành công, khao khát thành công của bạn phải lớn hơn nỗi sợ thất bại. - Bill Cosby",
+          "Tôi biết ơn những người đã nói KHÔNG với tôi. Bởi nhờ họ, tôi đã tự mình làm điều đó – Albert Einstein",
+          "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle - Steve Jobs",
           "When you say It's hard, it actually means I'm not strong enough to fight for it. Stop saying its hard.Think positive!",
-          "Don't worry about failures, worry about the chances you miss when you don't even try - <i>Jack Canfield</i>",
-          "Build your own dreams, or someone else will hire you to build theirs<i>Farrah Gray</i>",
+          "Don't worry about failures, worry about the chances you miss when you don't even try - Jack Canfield",
+          "Build your own dreams, or someone else will hire you to build theirs - Farrah Gray",
           "We learn something from everyone who passes through our lives.. Some lessons are painful, some are painless.. but, all are priceless",
           "Rule #1 of life. Do what makes YOU happy",
           "The biggest failure you can have in life is making the mistake of never trying at all",
-          "Trời Có Nói Gì Đâu Mà Bốn Mùa Thay Đổi - <i>Khổng Tử</i>"
+          "Trời Có Nói Gì Đâu Mà Bốn Mùa Thay Đổi - Khổng Tử"
     ],
     solar = [
           { n:  1, t:  1, l: 'Tết Dương lịch' },
@@ -396,18 +395,20 @@ class Lunarday extends HTMLElement {
 		  display: flex;
           justify-content: center;
           align-items: center;
+          text-align: center;
 		}
 		.le{
 		  display: block;
           clear: both;
 		  width:100%;
-          font-weight:bold;
 		  display: flex;
 		  font-size:1.3em;
 		  padding-top: 5px;
 		  padding-bottom: 20px;
 		  justify-content: center;
 		  align-items: center;
+		  text-align: center;
+		  font-weight: bold;
 		}
         .center3{
           display: block;
